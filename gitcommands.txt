@@ -15,3 +15,6 @@ git add . = prida vsetky zmenene subory
 git commit -m "<commit-sprava>"
 
 git push = "nahratie" commitnutych zmien do vzdialeneho repozitara
+
+token: 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
+
