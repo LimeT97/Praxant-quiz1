@@ -1,0 +1,138 @@
+body {
+	background-color: #404040;
+	color: white;
+}
+
+ /* logo and the timer */
+
+.logo_and_timer {
+	margin-left: 10px;
+	width: 120px;
+	float: left;
+}
+
+.logo {
+	display: inline-block;
+	width: 105px; 
+	height: 105px;
+	padding: none;
+	border-radius: 20%;
+	margin: 10px 0 0 5px;
+}
+
+.timer {
+	width: 105px;
+	height: 35px;
+	background-color: #D3D3D3;
+	font-size: 28px;
+	text-align: center;
+	color: black;
+}
+
+
+ /* main question */
+
+.question {
+	margin: 30px 30px 30px 30px;
+	float: left;
+}
+
+/* left part */
+
+.number {
+	height: 150px;
+	width: 150px;
+	background-color: #CE0A77;
+	border-radius: 20%;
+	text-align: center;
+	float: left;
+}
+
+.number pre {
+	font-size: 72px;
+	margin: 0;
+	padding: 20px 0 0 0;
+}
+
+/* right part */
+
+.questiontext {
+	float: right;
+	height: 150px;
+	width: 1100px;
+	background-color: #CE0A77;
+	border-radius: 5%;
+	text-align: center;
+}
+.questiontext pre {
+	font-size: 46px;
+}
+
+/* player names */
+
+.players {
+	position: absolute;
+	margin: 200px 20px 20px 20px;	
+	height: 150px;
+	width: 1500px;
+}
+
+.player1 {
+	float: left;
+	margin-left: 200px;
+}
+
+.player2 {
+	float: right;
+	margin-right: 200px;
+}
+
+.players pre {
+	font-size: 72px;
+	margin: 0;
+	padding: 0;
+}
+
+/* answer options */
+
+.answers_main {
+	position: absolute;
+	margin-top: 300px ;
+	width: 1500px;
+	height: 400px;
+	margin-left: 20px;
+	font-size: 72px;
+}
+
+
+.ans_left {
+	height: inherit;
+	width: 750px;
+	float: left;
+	border-right: 2px solid black;
+}
+
+.ans_right {
+	height: inherit;
+	width: 750px;
+	float: right;
+	border-left: 2px solid black;
+}
+
+.optionsleft {
+	float: left;
+	margin-left: 100px;
+}
+
+.optionsright {
+	float: right;
+	margin-right: 100px;
+}
+
+.options {
+	background-color: #CE0A77;
+	border-radius: 20%;
+	width: 250px;
+	height: 100px;
+	text-align: center;
+}
