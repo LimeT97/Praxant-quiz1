@@ -1,0 +1,265 @@
+body {
+	background-color: #404040;
+	color: white;
+	font-family: monospace;
+}
+
+/* logo */
+
+.logo {
+	margin-left: 10px;
+	width: 120px;
+	float: left;
+}
+
+.logo img {
+	display: inline-block;
+	width: 105px; 
+	height: 105px;
+	padding: none;
+	border-radius: 20%;
+	margin: 10px 0 0 5px;
+}
+
+/* title */
+
+.titlearea {
+	float: right;
+	margin: 30px 200px 30px 30px;
+	width: 900px;
+	height: 150px;
+}
+
+/* title */
+
+.title {
+	float: left;
+	height: 150px;
+	width: 650px;
+	background-color: #CE0A77;
+	border-radius: 40px;
+	text-align: center;
+	
+}
+.title pre {
+	font-size: 80px;
+	margin: 10px 0 0 0;
+}
+
+/* questions and score summary */
+
+/* style */
+
+.questions {
+	position: absolute;
+	margin: 200px 20px 0 20px;
+	width: 1500px;
+	height: 520px;
+}
+
+.question {
+	width: 1500px;
+	height: 120px;
+	margin: 0px 0 10px ;
+}
+
+
+.question_text {
+	background-color: #CE0A77;
+	width: 1500px;
+	height: 60px;
+	border-radius: 30px;
+	margin-top: 20px;
+}
+
+/* text */
+
+.question_text p {
+	font-size: 36px;	
+	margin-left: 30px;
+}
+
+/* sub-answers */
+
+/* left side of the screen */
+
+.player1 {
+	margin-top: 10px;
+	height: 60px;
+	float: left;
+	width: 750px;
+}
+
+/* left side of the bottom of player 1 */
+
+.answers {
+	width: 600px;
+	height: 60px;
+	float: left;
+}
+
+/* right side of the bottom of player 1 */
+
+.scores {
+width: 150px;
+height: 60px;
+float: right;
+border-right: 2px solid black;
+}
+
+/* answers A and B */
+
+.ans_left {
+	height: 60px;
+	width: 300px;
+	float: left;
+}
+
+#A {
+	float: left;
+}
+
+#B {
+	float: right;
+}
+
+/* answers C and D */
+
+.ans_right {
+	height: 60px;
+	width: 300px;
+	float: right;
+}
+
+#C {
+	float: left;
+}
+
+#D {
+	float: right;
+}
+
+
+/* individual answers */
+
+.answer {
+	height: 60px;
+	width: 100px;
+	margin: 0 25px;
+	background-color: #CE0A77;
+	border-radius: 25px;
+	text-align: center;
+	padding-top: 5px;
+	font-size: 36px;
+}
+
+/* individual sub-scores */
+
+.sub_score {
+	background-color: #00FF00;
+	height: 60px;
+	width: 100px;
+	margin: 0 25px;
+	border-radius: 25px;
+	text-align: center;
+	padding-top: 5px.;
+	font-size: 36px;
+}
+
+/* alternate styles for player 2 to apply symetry */
+
+.scores_alt {
+	width: 150px;
+	height: 60px;
+	float: left;
+	border-left: 2px solid black;
+}
+
+.answers_alt {
+	width: 600px;
+	height: 60px;
+	float: right;
+}
+
+/* score summary player 1 */
+
+.sum_l {
+	float: left;
+	width: 700px;
+	height: 80px;
+	margin: 10px 0 10px 30px;
+}
+
+.sum_r {
+	float: right;
+	width: 700px;
+	height: 80px;
+	margin: 10px 30px 10px 0;
+}
+
+.summary_player_id_l {
+	float: left;
+	font-size: 42px;
+	margin-left: 250px;
+}
+
+.sub_score_alt_l {
+	float: right;
+	background-color: #00FF00;
+	height: 60px;
+	width: 150px;
+	border-radius: 25px;
+	text-align: center;
+	padding-top: 5px.;
+	font-size: 36px;
+}
+
+/* score summary player 2 */
+
+.summary_player_id_r {
+	float: right;
+	font-size: 42px;
+	margin-right: 250px;
+}
+
+.sub_score_alt_r {
+	float: left;
+	background-color: #00FF00;
+	height: 60px;
+	width: 150px;
+	border-radius: 25px;
+	text-align: center;
+	padding-top: 5px.;
+	font-size: 36px;
+}
+
+/* extra little features */
+
+.greenborder {
+	border: 3px solid #00FF00;
+	
+}
+
+.redborder {
+	border: 3px solid #FF0000;
+}
+
+.sub_score_wrong {
+	background-color: #FF0000;
+	height: 60px;
+	width: 100px;
+	margin: 0 25px;
+	border-radius: 25px;
+	text-align: center;
+	padding-top: 5px.;
+	font-size: 36px;
+}
+
+
+
+
+
+
+
+
+
