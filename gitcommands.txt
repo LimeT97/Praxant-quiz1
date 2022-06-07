@@ -1,0 +1,20 @@
+GIT prikazy:
+
+git status = aktualny status repozitara
+
+git clone <url-repozitara> = stiahnutie projektu
+
+git pull = stiahnutie aktualnej verzie projektu z remote repozitara
+
+git branch -a = vypise vsetky vetvy
+
+git checkout <nazov-vetvy> = prepnutie do inej vetvy
+
+git add . = prida vsetky zmenene subory
+
+git commit -m "<commit-sprava>"
+
+git push = "nahratie" commitnutych zmien do vzdialeneho repozitara
+
+token: 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
+
