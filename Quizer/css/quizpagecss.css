@@ -34,8 +34,11 @@ body {
  /* main question */
 
 .question {
+	position: absolute;
+	display: inline-block;
 	margin: 30px 30px 30px 30px;
 	float: left;
+	width: 1250px
 }
 
 /* left part */
