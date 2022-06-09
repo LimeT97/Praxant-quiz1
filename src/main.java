@@ -17,6 +17,16 @@ public class main {
             e.printStackTrace();
         }
 
+        DBServices db = new DBServices();
+        db.createTable("CREATE TABLE IF NOT EXISTS user (user_id integer NOT NULL, user_name VARCHAR(100) NOT NULL, user_surname VARCHAR(100) NOT NULL, user_email VARCHAR(100) NOT NULL)");
+
+        Users u = new Users(1, "Peter", "Lesko", "lesko@spse-po.sk");
+
+
+        db.insertUser(u);
+        System.out.println(db.getAllUsers());
+        System.out.println(db.getUserByName("Peter"));
+
 
 
     }
