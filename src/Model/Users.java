@@ -15,37 +15,32 @@ public class Users {
     }
 
 
-    public Users(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUser_name() {
         return user_name;
     }
 
-    public String getUser_surname() {
-        return user_surname;
-    }
-
-    public String getUser_email() {
-        return user_email;
-    }
-
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setUser_name(String user_name) {
         this.user_name = user_name;
     }
 
+    public String getUser_surname() {
+        return user_surname;
+    }
+
     public void setUser_surname(String user_surname) {
         this.user_surname = user_surname;
+    }
+
+    public String getUser_email() {
+        return user_email;
     }
 
     public void setUser_email(String user_email) {
