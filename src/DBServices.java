@@ -1,10 +1,7 @@
 package src;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
 
 import src.Model.*;
 
@@ -30,27 +27,17 @@ public class DBServices {
 
     }
 
-    /* unused methods
+    // closing the DB connection
     public void closeDBSession() {
         if (this.connection != null) {
             try {
                 this.connection.close();
-                System.out.println("Database session has been closed");
+                System.out.println(" \n Database session has been closed");
             } catch (SQLException var2) {
                 var2.printStackTrace();
             }
         }
     }
-
-    public void dropDatabase() {
-        File myObj = new File("quizer.db");
-        if (myObj.delete()) {
-            System.out.println("Deleted the file: " + myObj.getName());
-        } else {
-            System.out.println("Failed to delete the file.");
-        }
-    }
-    */
 
     // creating a table
     public void createTable(String tableQuery) {
@@ -60,7 +47,6 @@ public class DBServices {
         } catch (SQLException var3) {
             var3.printStackTrace();
         }
-
     }
 
     // DROPS
@@ -94,7 +80,6 @@ public class DBServices {
             var4.printStackTrace();
         }
     }
-
 
 
     // INSERTS
@@ -219,10 +204,97 @@ public class DBServices {
     }
 
 
+    // SELECTS
 
 
-        // SELECTS (unused)
-   /* public ArrayList<User> getAllUsers() {
+    /*public ArrayList<Questions> getAllQuestions() {
+        ArrayList<Questions> qst = new ArrayList();
+        Statement stmt = null;
+
+        try {
+            stmt = this.connection.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT qst_id, qst_text, qst_difficulty, qst_points, quiz_id FROM questions");
+
+            while (rs.next()) {
+                Questions q = new Questions(rs.getInt("qst_id"), rs.getString("qst_text"),
+                        rs.getInt("qst_difficulty"), rs.getInt("qst_points"), rs.getInt("quiz_id"));
+                qst.add(q);
+                System.out.println(q);
+            }
+        } catch (SQLException var5) {
+            var5.printStackTrace();
+        }
+
+        System.out.println(qst);
+
+        return qst;
+    }*/
+
+    
+    public Questions getQuestion(int question_id) {
+        Statement stmt = null;
+        Questions q = null;
+        
+        try {
+            stmt = this.connection.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT qst_id, qst_text, qst_difficulty, qst_points, quiz_id FROM questions WHERE qst_id =" + question_id + ";");
+            q = new Questions(rs.getInt("qst_id"), rs.getString("qst_text"),
+                    rs.getInt("qst_difficulty"), rs.getInt("qst_points"), rs.getInt("quiz_id"));
+            
+        } catch (SQLException var5) {
+            var5.printStackTrace();
+        }
+        
+        //System.out.println(q);
+        return q;
+    }
+
+
+    public ArrayList<Answers> getAnswersByQuestionId(int question_id) {
+        ArrayList<Answers> ans_list = new ArrayList();
+        Statement stmt = null;
+
+        try {
+            stmt = this.connection.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT ans_id, ans_text, ans_flag, qst_id FROM answers WHERE qst_id = " + question_id + ";");
+
+            while (rs.next()) {
+                Answers a = new Answers(rs.getInt("ans_id"), rs.getString("ans_text"),
+                        rs.getString("ans_flag"), rs.getInt("qst_id"));
+                ans_list.add(a);
+                //System.out.println(a);
+            }
+        } catch (SQLException var5) {
+            var5.printStackTrace();
+        }
+
+        return ans_list;
+    }
+
+
+    public void prettyPrintQuestion(int qst_id){
+        Questions question1 = getQuestion(qst_id);
+        ArrayList<Answers> answers1 = getAnswersByQuestionId(question1.getQst_id());
+        System.out.println("\n" + question1.getQst_text());
+        for (Answers answ: answers1) {
+            System.out.println(answ.getAns_text());
+        }
+    }
+
+
+
+
+    public String printQuestionWithAnswers(Questions questions) {
+
+        return null;
+    }
+
+
+
+
+
+
+    /*public ArrayList<User> getAllUsers() {
         ArrayList<User> users = new ArrayList();
         Statement stmt = null;
 
@@ -241,6 +313,8 @@ public class DBServices {
         return users;
     }
 
+
+
     public User getUserByName(String name) {
         PreparedStatement pstmt = null;
         User u = null;
@@ -255,6 +329,10 @@ public class DBServices {
             var5.printStackTrace();
         }
 
-        return u;*/
+        return u;
+    }
+
+     */
+
 
 }

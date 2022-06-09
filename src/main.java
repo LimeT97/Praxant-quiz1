@@ -1,9 +1,12 @@
 package src;
 
+import src.Model.Answers;
+import src.Model.Questions;
 import src.Model.TableCreator;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class main {
 
@@ -26,8 +29,19 @@ public class main {
         TableCreator tc = new TableCreator();
         tc.createTables();
 
-        //filling all tables
+        // filling all tables
         TableSeeder ts = new TableSeeder();
         ts.seedTables();
+
+
+        System.out.println(" \n");
+        db.prettyPrintQuestion(1);
+        db.prettyPrintQuestion(2);
+        db.prettyPrintQuestion(3);
+
+
+
+        // closing the database connection
+        db.closeDBSession();
     }
 }
