@@ -1,7 +1,6 @@
 package src;
 
-import src.Model.Users;
-
+import src.Model.TableCreator;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -10,6 +9,8 @@ public class main {
 
     public static void main(String[] args) {
 
+
+        // connection to database
         try {
             Connection connection = DriverManager.getConnection("jdbc:sqlite:quizer.db");
             System.out.println("Connection to SQLite has been established.");
@@ -17,17 +18,16 @@ public class main {
             e.printStackTrace();
         }
 
+        // dropping all tables
         DBServices db = new DBServices();
-        db.createTable("CREATE TABLE IF NOT EXISTS user (user_id integer NOT NULL, user_name VARCHAR(100) NOT NULL, user_surname VARCHAR(100) NOT NULL, user_email VARCHAR(100) NOT NULL)");
+        db.dropTables();
 
-        Users u = new Users(1, "Peter", "Lesko", "lesko@spse-po.sk");
+        // creating all tables
+        TableCreator tc = new TableCreator();
+        tc.createTables();
 
-
-        db.insertUser(u);
-        System.out.println(db.getAllUsers());
-        System.out.println(db.getUserByName("Peter"));
-
-
-
+        //filling all tables
+        TableSeeder ts = new TableSeeder();
+        ts.seedTables();
     }
 }

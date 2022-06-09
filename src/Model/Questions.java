@@ -55,4 +55,9 @@ public class Questions {
     public void setQuiz_id(int quiz_id) {
         this.quiz_id = quiz_id;
     }
+
+    @Override
+    public String toString() {
+        return "Question: " + qst_id + " " +qst_text + " " + qst_difficulty + " " + qst_points + " " + quiz_id;
+    }
 }

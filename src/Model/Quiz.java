@@ -35,4 +35,9 @@ public class Quiz {
     public void setCat_id(int cat_id) {
         this.cat_id = cat_id;
     }
+
+    @Override
+    public String toString() {
+        return "Quiz: " + quiz_id + " " + quiz_name + " " +cat_id;
+    }
 }

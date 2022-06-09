@@ -1,26 +1,26 @@
 package src.Model;
 
-public class Users {
+public class User {
 
-    private int id;
+    private int user_id;
     private String user_name;
     private String user_surname;
     private String user_email;
 
-    public Users(int id, String user_name, String user_surname, String user_email) {
-        this.id = id;
+    public User(int id, String user_name, String user_surname, String user_email) {
+        this.user_id = id;
         this.user_name = user_name;
         this.user_surname = user_surname;
         this.user_email = user_email;
     }
 
 
-    public int getId() {
-        return id;
+    public int getUser_id() {
+        return user_id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.user_id = id;
     }
 
     public String getUser_name() {
@@ -45,5 +45,10 @@ public class Users {
 
     public void setUser_email(String user_email) {
         this.user_email = user_email;
+    }
+
+    @Override
+    public String toString() {
+        return "User: " + user_id + " " + user_name + " " + user_surname + " " + user_email;
     }
 }

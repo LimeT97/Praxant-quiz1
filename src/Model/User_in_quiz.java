@@ -35,4 +35,9 @@ public class User_in_quiz {
     public void setQuiz_id(int quiz_id) {
         this.quiz_id = quiz_id;
     }
+
+    @Override
+    public String toString() {
+        return "User_in_quiz: " + uiq_id + " " + user_id + " " + quiz_id;
+    }
 }
